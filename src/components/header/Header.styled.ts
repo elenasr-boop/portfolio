@@ -1,38 +1,37 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-    display: flex;
-    justify-content: space-between;
-    padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
 `;
 
-export const ThemeButton = styled.button`
-    width: 140px;
-  background-color: ${({ theme }) => theme.buttonBackground};
-  color: ${({ theme }) => theme.buttonText};
-  border: 1px solid ${({ theme }) => theme.buttonBackground};
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
-  box-shadow: ${({ theme }) => theme.boxShadow};
+export const ToggleThemeCont = styled.div`
+  display: grid;
+  place-items: center;
+  /* min-height: 100svh; */
+  margin: 0;
+  transition: background-position .75s ease;
+  background-position-y: ${({ theme }) => theme.toggleTheme};
 
-  &:hover {
-    background-color: ${({ theme }) => theme.buttonHoverBackground};
-    color: #ffffff;
-    box-shadow: ${({ theme }) => theme.buttonHoverBoxShadow};
+  & #sunmoon {
+    position: relative;
+    width: 75px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    overflow: hidden;
+    filter: url("#blob");
   }
-
-  &:active {
-    background-color: ${({ theme }) => theme.buttonActiveBackground};
-    color: ${({ theme }) => theme.buttonText};
-    box-shadow: none;
-  }
-
-  &:disabled {
-    background-color: ${({ theme }) => theme.buttonDisabledBackground};
-    color: ${({ theme }) => theme.buttonDisabledText};
-    box-shadow: none;
-    cursor: not-allowed;
+  & #sunmoon:before {
+    content: "";
+    position: absolute;
+    top: ${({ theme }) => theme.sunmoonTop};
+    left: ${({ theme }) => theme.sunmoonLeft};
+    width: 172%;
+    height: 172%;
+    background: ${({ theme }) => theme.sunmoonBg};
+    transition: .75s ease;
+    -webkit-clip-path: url(#sunmoon_clip);
+    clip-path: url(#sunmoon_clip);
   }
 `;

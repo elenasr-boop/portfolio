@@ -14,6 +14,10 @@ export type ThemeType = {
   buttonDisabledText: string, 
   boxShadow: string,
   hoverBoxShadow: string,
+  toggleTheme: string, 
+  sunmoonTop: string,
+  sunmoonLeft: string,
+  sunmoonBg: string,
 };
 
 export const lightTheme: ThemeType = {
@@ -32,6 +36,10 @@ export const lightTheme: ThemeType = {
   buttonDisabledText: "#666666", 
   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
   hoverBoxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+  toggleTheme: "0vh",
+  sunmoonTop: "-72%",
+  sunmoonLeft: "-72%",
+  sunmoonBg: "#FFCE54",
 };
 
 export const darkTheme: ThemeType = {
@@ -50,5 +58,8 @@ export const darkTheme: ThemeType = {
   buttonDisabledText: "#A0A0A0", 
   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
   hoverBoxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-  
+  toggleTheme: "-200vh",
+  sunmoonTop: "-20%",
+  sunmoonLeft: "-30%",
+  sunmoonBg: "#FFF3D8"  
 };
