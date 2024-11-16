@@ -1,12 +1,21 @@
-import 'styled-components';
+import "styled-components";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export type ThemeType = {
-    background: string,
-    text: string,
-    headline: string,
-    button: string,
-    buttonHover: string,
-    additionaly: string,
-  }
+    background: string;
+    text: string;
+    headline: string;
+    additionaly: string;
+    link: string;
+    linkHover: string;
+    linkActive: string;
+    buttonBackground: string;
+    buttonText: string;
+    buttonHoverBackground: string;
+    buttonActiveBackground: string;
+    buttonDisabledBackground: string;
+    buttonDisabledText: string;
+    boxShadow: string;
+    hoverBoxShadow: string;
+  };
 }

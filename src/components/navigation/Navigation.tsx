@@ -1,5 +1,11 @@
+import { Nav, NavLink } from "./Navigation.styled";
+
 export function Navigation () {
     return (
-        <div className="nav">It's navigation</div>
+        <Nav>
+            <NavLink to="/" data-content="Home" >Home</NavLink>
+            <NavLink to="/about" data-content="About" >About</NavLink>
+            <NavLink to="/contacts" data-content="Contacts" >Contacts</NavLink>
+        </Nav>
     )
 }
